@@ -93,9 +93,13 @@
 
             <?php
             foreach (indexkar() as $index => $karyawan) {
+                if($_SESSION['listkaryawan'][$_SESSION['listmix'][$_GET['edit']]->nama]->nama == $karyawan->nama){
+                    continue;
+                }else{
             ?>
                 <option value="<?= $index ?>"><?= $karyawan->nama ?></option>
             <?php
+                }
             }
             ?>
         </select>
@@ -111,9 +115,13 @@
             ?>
             <?php
             foreach (indexoff() as $index => $office) {
+                if($_SESSION['listoffice'][$_SESSION['listmix'][$_GET['edit']]->office]->nama == $office->nama){
+                    continue;
+                }else{
             ?>
                 <option value="<?= $index ?>"><?= $office->nama ?></option>
             <?php
+                }
             }
             ?>
         </select>
