@@ -104,12 +104,12 @@
       <input type="hidden" name="pos" value='<?= $_GET['edit'] ?>'>
     </div>
     <button name="<?php
-    if(isset($_GET['edit'])){
-      echo "edit";
-    }else{
-      echo "submit";
-    }
-    ?>" type="submit" class="btn btn-primary">Submit</button>
+                  if (isset($_GET['edit'])) {
+                    echo "edit";
+                  } else {
+                    echo "submit";
+                  }
+                  ?>" type="submit" class="btn btn-primary">Submit</button>
   </form>
 </body>
 
